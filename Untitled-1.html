@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--here to change-->
+    <p id="changelbl">"change"</p>
+    <input id="changeinput" type="text" placeholder="type sth">
+    <button id="changebtn" onclick="changecontent()">click to change</button>
+    <hr/>
+    <!--here to change attribute-->
+    <p id="changeattributelbl">"change attribute"</p>
+    <input type="submit" id="changeattributebtn" value="click to change attribute" onclick="changeattributecontent()">
+    <hr/>
+    <!--here to change CSS-->
+    <p id="changeattributeCSSlbl">"change attribute CSS"</p>
+    <input type="submit" id="changeattributeCSSbtn" value="click to change attribute CSS" onclick="changeattributeCSScontent()">
+    <hr/>
+    <!--here to hide and show-->
+    <p style="display: block;" id="hideshow">"hide and show this lable"</p>
+    <input type="submit" id="hideandshow" value="clicktohideandshow" onclick="hideshow()">
+</body>
+<script>
+    function changecontent(){
+        var changecontent = document.getElementById('changeinput').value;
+        document.getElementById('changelbl').innerHTML=changecontent;
+    }
+    function changeattributecontent(){
+        document.getElementById('changeattributebtn').setAttribute("style", "background-color: red;");
+    }
+    function changeattributeCSScontent(){
+        document.getElementById('changeattributeCSSbtn').setAttribute("style", "background-color: cyan;");
+    }
+    function hideshow(){
+        var x = document.getElementById("hideshow");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+</html>
